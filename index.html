@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codificador de Senha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">🔐</span>
+          <span>Codificador de Senha</span>
+        </div>
+      </header>
+
+      <main class="container">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Segurança visualizada</p>
+            <h1>Transforme uma senha em um código passo a passo.</h1>
+            <p class="subtitle">
+              Digite uma senha e veja como ela passa por cada etapa do processo de codificação.
+            </p>
+          </div>
+
+          <div class="card panel-form">
+            <label for="passwordInput">Senha</label>
+            <div class="input-row">
+              <input id="passwordInput" type="text" placeholder="Ex.: MinhaSenha123" maxlength="40" />
+              <button id="encodeButton" type="button">Codificar</button>
+            </div>
+            <p class="helper">A codificação usa: ASCII → César (+3) → Binário</p>
+          </div>
+        </section>
+
+        <section class="results hidden" id="resultsSection">
+          <div class="result-header">
+            <h2>Resultado da codificação</h2>
+            <button class="ghost-button" id="resetButton" type="button">Limpar</button>
+          </div>
+
+          <div class="steps-grid">
+            <article class="step-card accent">
+              <h3>1. Senha original</h3>
+              <p id="originalValue" class="big-value">-</p>
+            </article>
+
+            <article class="step-card">
+              <h3>2. ASCII</h3>
+              <p id="asciiValue" class="small-value">-</p>
+            </article>
+
+            <article class="step-card">
+              <h3>3. César (+3)</h3>
+              <p id="caesarValue" class="small-value">-</p>
+            </article>
+
+            <article class="step-card accent-dark">
+              <h3>4. Binário</h3>
+              <p id="binaryValue" class="small-value">-</p>
+            </article>
+          </div>
+
+          <div class="final-box">
+            <h3>Código final</h3>
+            <p id="finalCode">-</p>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Caractere</th>
+                  <th>ASCII</th>
+                  <th>César (+3)</th>
+                  <th>Binário</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

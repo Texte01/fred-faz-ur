@@ -72,6 +72,7 @@
           </div>
 
           <div class="table-wrap">
+            <h3 style="margin: 0 0 16px; color: var(--muted);">Detalhamento por caractere</h3>
             <table>
               <thead>
                 <tr>
@@ -83,6 +84,62 @@
               </thead>
               <tbody id="tableBody"></tbody>
             </table>
+          </div>
+
+          <div class="explanation-box">
+            <h2>Como funciona a Cifra de César?</h2>
+            <p>A Cifra de César é um método de criptografia que desloca cada letra do alfabeto por um número fixo de posições (neste caso, 3).</p>
+            
+            <div class="explanation-grid">
+              <div class="explanation-item">
+                <h4>📌 Funcionamento</h4>
+                <p>Cada letra é substituída por outra que está 3 posições à frente no alfabeto:</p>
+                <ul>
+                  <li><strong>A</strong> → <strong>D</strong></li>
+                  <li><strong>B</strong> → <strong>E</strong></li>
+                  <li><strong>C</strong> → <strong>F</strong></li>
+                  <li>... e assim por diante</li>
+                </ul>
+              </div>
+
+              <div class="explanation-item">
+                <h4>🔄 O ciclo do alfabeto</h4>
+                <p>Quando chegamos ao final do alfabeto, voltamos ao início:</p>
+                <ul>
+                  <li><strong>X</strong> → <strong>A</strong></li>
+                  <li><strong>Y</strong> → <strong>B</strong></li>
+                  <li><strong>Z</strong> → <strong>C</strong></li>
+                </ul>
+              </div>
+
+              <div class="explanation-item">
+                <h4>🔢 Números e símbolos</h4>
+                <p>Números, espaços e símbolos não são modificados pela cifra de César, apenas as letras.</p>
+              </div>
+
+              <div class="explanation-item">
+                <h4>📚 Exemplo prático</h4>
+                <p>Se você digitar <strong>"abc"</strong>:</p>
+                <ul>
+                  <li><strong>a</strong> (ASCII 97) → <strong>d</strong></li>
+                  <li><strong>b</strong> (ASCII 98) → <strong>e</strong></li>
+                  <li><strong>c</strong> (ASCII 99) → <strong>f</strong></li>
+                  <li>Resultado: <strong>"def"</strong></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="caesar-table">
+              <h3>Tabela de conversão (A-Z)</h3>
+              <div class="alphabet-row">
+                <div class="alphabet-label">Original:</div>
+                <div class="alphabet-chars">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</div>
+              </div>
+              <div class="alphabet-row">
+                <div class="alphabet-label">César +3:</div>
+                <div class="alphabet-chars">D E F G H I J K L M N O P Q R S T U V W X Y Z A B C</div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
